@@ -3,8 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'listen', groups: [:development, :test]
 
-
+gem 'aws-sdk', '~> 3'
 gem 'jwt', "~> 2.1"
 #Incription Gem 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -39,7 +40,7 @@ end
 
 group :development do
   gem 'dotenv-rails'
-  gem 'listen'
+  # gem 'listen'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
